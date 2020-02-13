@@ -6,4 +6,14 @@
 //  Copyright © 2020 Shota Shimazu. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+
+class BasicButton: UIButton {
+    
+}
+
+class CurrentLocationButton: UIButton {
+    
+}

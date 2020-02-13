@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25400B6F23F062B1004DFF8D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25400B6E23F062B1004DFF8D /* MapKit.framework */; };
+		2577A55B23F2DEB400A25722 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2577A55A23F2DEB400A25722 /* Buttons.swift */; };
 		257E2D0723EA71DE00168216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257E2D0623EA71DE00168216 /* AppDelegate.swift */; };
 		257E2D0923EA71DE00168216 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257E2D0823EA71DE00168216 /* SceneDelegate.swift */; };
 		257E2D0B23EA71DE00168216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257E2D0A23EA71DE00168216 /* ViewController.swift */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25400B6E23F062B1004DFF8D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2565F0A323F2B742004934FD /* GPS Logger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GPS Logger.entitlements"; sourceTree = "<group>"; };
+		2577A55A23F2DEB400A25722 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		257E2D0323EA71DE00168216 /* GPS Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPS Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		257E2D0623EA71DE00168216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		257E2D0823EA71DE00168216 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25400B6F23F062B1004DFF8D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +64,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25400B6D23F062B1004DFF8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25400B6E23F062B1004DFF8D /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2577A55923F2DE8C00A25722 /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				2577A55A23F2DEB400A25722 /* Buttons.swift */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
 		257E2CFA23EA71DE00168216 = {
 			isa = PBXGroup;
 			children = (
 				257E2D0523EA71DE00168216 /* GPS Logger */,
 				257E2D1C23EA71E200168216 /* GPS LoggerUITests */,
 				257E2D0423EA71DE00168216 /* Products */,
+				25400B6D23F062B1004DFF8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +102,8 @@
 		257E2D0523EA71DE00168216 /* GPS Logger */ = {
 			isa = PBXGroup;
 			children = (
+				2577A55923F2DE8C00A25722 /* UIComponent */,
+				2565F0A323F2B742004934FD /* GPS Logger.entitlements */,
 				257E2D0623EA71DE00168216 /* AppDelegate.swift */,
 				257E2D0823EA71DE00168216 /* SceneDelegate.swift */,
 				257E2D0A23EA71DE00168216 /* ViewController.swift */,
@@ -203,6 +228,7 @@
 				257E2D0B23EA71DE00168216 /* ViewController.swift in Sources */,
 				257E2D0723EA71DE00168216 /* AppDelegate.swift in Sources */,
 				257E2D0923EA71DE00168216 /* SceneDelegate.swift in Sources */,
+				2577A55B23F2DEB400A25722 /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +388,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GPS Logger/GPS Logger.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				INFOPLIST_FILE = "GPS Logger/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -371,6 +399,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shotastage.GPS-Logger";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,7 +409,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GPS Logger/GPS Logger.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				INFOPLIST_FILE = "GPS Logger/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,6 +420,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shotastage.GPS-Logger";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
